@@ -1,0 +1,99 @@
+================================================================
+PROFESSIONAL BLOG WEBSITE - COMPLETE REQUIREMENTS & TECH STACK
+================================================================
+
+Project Name: My Professional Blog (2025 Standard)
+Goal: Fast, SEO-friendly, Beautiful, Zero-maintenance, Fully Customizable Blog
+
+──────────────────────────────────────────────────────────────
+1. CORE PAGES (Must Have)
+──────────────────────────────────────────────────────────────
+- Home Page (Latest posts grid/list + featured post)
+- Blog Post List Page (/blog or /posts)
+- Individual Blog Post Page (dynamic route: /blog/post-slug)
+- About Page
+- Contact Page (with form)
+- Tags/Categories Page (/tags, /category/programming etc.)
+- Search Page (/search)
+- 404 Not Found Page (custom)
+- Privacy Policy Page
+- RSS Feed (/feed.xml or /rss)
+
+───────────────────────────────────────────────────────
+2. ESSENTIAL FEATURES (Professional Level)
+───────────────────────────────────────────────────────
+✓ Markdown/MDX based posts (easy writing)
+✓ Frontmatter support (title, date, description, tags, featured image, author)
+✓ Automatic Table of Contents (TOC) for long posts
+✓ Code syntax highlighting (with copy button)
+✓ Reading time calculator
+✓ Series/Part support (Part 1, Part 2 links)
+✓ Related posts section
+✓ Previous/Next post navigation
+✓ Dark/Light mode toggle
+✓ Fully Responsive (mobile + tablet + desktop)
+✓ Lightning fast loading (Lighthouse 95+ score)
+✓ SEO Optimized (Open Graph, Twitter Cards, JSON-LD, sitemap.xml, robots.txt)
+✓ Image optimization (WebP, lazy load, responsive sizes)
+✓ Comments system (Giscus / Utterances / Disqus)
+✓ Newsletter subscription (optional: ConvertKit, Buttondown, Mailchimp)
+✓ Search functionality (local or Algolia)
+✓ Analytics (Umami / Vercel Analytics / Plausible - privacy friendly)
+✓ RSS Feed + JSON Feed
+✓ Pagination or Infinite Scroll
+✓ Author bio section
+✓ Social sharing buttons
+✓ Reading progress bar
+✓ Tags & Categories with count
+✓ Draft posts support (in dev)
+
+───────────────────────────────────────────────────────
+3. RECOMMENDED TECH STACK 2025 (Easiest + Most Powerful)
+───────────────────────────────────────────────────────
+Framework         → Next.js 14+ (App Router)
+Language          → JavaScript / TypeScript (TS recommended later)
+Styling           → Tailwind CSS + shadcn/ui or DaisyUI
+Content           → MDX + Contentlayer (or simple .mdx files)
+Static Generation → Yes (SSG - fastest)
+Deploy            → Vercel (1-click, free, custom domain)
+Comments          → Giscus (free, GitHub-based, best for devs)
+Search            → FlexSearch or Algolia (free tier)
+Syntax Highlight → shiki or rehype-pretty-code
+Images            → Next.js Image component + Cloudinary (optional)
+Analytics         → Vercel Analytics or Umami (self-hosted)
+Newsletter        → Buttondown / ConvertKit / Resend
+Sitemap & RSS     → next-sitemap package
+Reading Time      → reading-time package
+Table of Contents → rehype-toc or mdx-toc
+
+───────────────────────────────────────────────────────
+4. FOLDER STRUCTURE (Standard)
+───────────────────────────────────────────────────────
+my-blog/
+├── app/
+│   ├── (routes)
+│   │   ├── page.jsx          → Home
+│   │   ├── about/page.jsx
+│   │   ├── contact/page.jsx
+│   │   ├── blog/
+│   │   │   ├── page.jsx      → All posts
+│   │   │   └── [slug]/page.jsx
+│   │   ├── tags/[tag]/page.jsx
+│   │   └── search/page.jsx
+├── content/
+│   └── posts/
+│       └── my-first-post.mdx
+├── components/
+│   ├── PostCard.jsx
+│   ├── TOC.jsx
+│   ├── Comments.jsx
+│   └── ThemeToggle.jsx
+├── lib/
+│   └── utils.js (reading time, format date etc.)
+├── public/
+│   └── images/
+└── tailwind.config.js
+
+
+
+
