@@ -1,0 +1,41 @@
+export const metadata = {
+    title: "Privacy Policy - My Professional Blog",
+    description: "Privacy Policy for My Professional Blog.",
+};
+
+export default function PrivacyPage() {
+    return (
+        <div className="container mx-auto max-w-3xl px-4 py-10">
+            <h1 className="mb-8 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Privacy Policy</h1>
+            <div className="prose prose-neutral dark:prose-invert">
+                <p>Last updated: November 20, 2025</p>
+                <p>
+                    This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+                </p>
+                <h2>Collecting and Using Your Personal Data</h2>
+                <h3>Types of Data Collected</h3>
+                <h4>Personal Data</h4>
+                <p>
+                    While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+                </p>
+                <ul>
+                    <li>Email address</li>
+                    <li>First name and last name</li>
+                    <li>Usage Data</li>
+                </ul>
+                <h3>Usage Data</h3>
+                <p>
+                    Usage Data is collected automatically when using the Service.
+                </p>
+                <p>
+                    Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+                </p>
+                <h2>Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+                <ul>
+                    <li>By email: contact@example.com</li>
+                </ul>
+            </div>
+        </div>
+    );
+}
