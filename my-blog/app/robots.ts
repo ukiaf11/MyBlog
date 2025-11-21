@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: "/",
             disallow: "/private/",
         },
-        sitemap: "https://your-blog-url.com/sitemap.xml",
+        sitemap: "https://upendra-blogs.vercel.app/sitemap.xml",
     };
 }

@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const posts = getSortedPostsData();
-    const baseUrl = "https://your-blog-url.com"; // Replace with actual URL
+    const baseUrl = "https://upendra-blogs.vercel.app";
 
     const postUrls = posts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,

@@ -1,10 +1,10 @@
 import { getSortedPostsData } from "@/lib/posts";
 
 export async function GET() {
-    const posts = getSortedPostsData();
-    const siteUrl = "https://your-blog-url.com";
+  const posts = getSortedPostsData();
+  const siteUrl = "https://upendra-blogs.vercel.app";
 
-    const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
+  const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Professional Blog</title>
@@ -14,8 +14,8 @@ export async function GET() {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml" />
     ${posts
-            .map((post) => {
-                return `
+      .map((post) => {
+        return `
       <item>
         <title><![CDATA[${post.title}]]></title>
         <link>${siteUrl}/blog/${post.slug}</link>
@@ -23,14 +23,14 @@ export async function GET() {
         <pubDate>${new Date(post.date).toUTCString()}</pubDate>
         <description><![CDATA[${post.description}]]></description>
       </item>`;
-            })
-            .join("")}
+      })
+      .join("")}
   </channel>
 </rss>`;
 
-    return new Response(rssXml, {
-        headers: {
-            "Content-Type": "application/xml",
-        },
-    });
+  return new Response(rssXml, {
+    headers: {
+      "Content-Type": "application/xml",
+    },
+  });
 }
